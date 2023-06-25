@@ -1,0 +1,204 @@
+.product_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2c2c2c;
+    width: 100vw;
+    min-height: 91vh;
+    padding: 5vh 0;
+
+    font-family: 'Pacifico';
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: #000000;
+}
+
+.product-row {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    background: #85DB9D;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 2%;
+    align-items: center;
+}
+
+.product-main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+}
+
+.product-info-div {
+    display: flex;
+    width: 70%;
+    margin-bottom: 2%;
+}
+
+.product-info-div img {
+    height: 250px;
+    border-radius: 20px;
+}
+
+.product-name-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 5%;
+}
+
+.product-name-price h2 {
+    display: flex;
+    text-align: center;
+    letter-spacing: 0.07em;
+    font-size: calc(20px + 12 * (100vw/1920));
+}
+
+.product-name-price p {
+    font-family: 'Pacifico';
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #000000;
+    font-size: calc(20px + 12 * (100vw/1920));
+}
+
+.product-name-price p span {
+    font-family: 'Roboto';
+    font-style: normal;
+}
+
+.product-description{
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-style: italic;
+    font-size: calc(15px + 7 * (100vw/1920));
+    line-height: 4vh;
+    border-left: 2px solid black;
+    padding: 0 2%;
+}
+
+
+#basket_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+.product-amount-totalprice{
+    display: flex;  
+    width: 60%;
+    justify-content: space-between;
+}
+
+.product-amount-main{
+    background: white;
+    border-radius: 10px;
+    font-size: calc(20px + 12 * (100vw/1920));
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    height: fit-content;
+    line-height: 1.5em;
+    user-select: none;
+}
+
+.change-amount-main{
+    cursor: pointer;
+}
+
+.product-totalprice{
+    font-family: 'Roboto';
+    font-size: calc(20px + 14 * (100vw/1920));
+}
+
+.product-totalprice span{
+    font-family: 'Pacifico';
+}
+
+.add-product-button{
+    font-family: 'Pacifico';
+    font-size: calc(16px + 12 * (100vw/1920));
+    letter-spacing: 0.05em;
+    color: white;
+    background: none;
+    border-radius: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 1% 2%;
+}
+
+.add-product-button:hover{
+    background: black;
+}
+
+
+@media screen and (max-width: 1280px) {
+    .product-main{
+        flex-direction: column;
+    }
+    #basket_form {
+        flex-direction: row;
+        width: 70%;
+        margin: 0;
+        justify-content: start;
+    }
+    .product-amount-main{
+        width: 50%;
+    }
+    .product-amount-totalprice{
+        width: 50%;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .product-info-div{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .product-row{
+        width: 90vw;
+    }
+    #basket_form {
+        width: 100%;
+        justify-content: center;
+    }
+    .product-info-div{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .product-info-div img{
+        width: 50vw;
+        height: 50vw;
+    }
+    
+}
+
+@media screen and (max-width: 480px){
+    #basket_form {
+        flex-direction: column;
+        border-top: 1px solid black;
+    }
+    .product-amount-totalprice{
+        width: 100%;
+        margin: 10px 0;
+    }
+    .product-amount-main{
+        width: 50%;
+    }
+    .add-product-button{
+        margin-bottom: 15px;
+    }
+}

@@ -1,0 +1,118 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'main/style.css' %}">{% endblock %}
+{% block title %}CoffeeMania{% endblock%}
+
+{% block content %}
+<div class="content">
+    <div class="face_div">
+        <div class="slog_text">
+            <p class="title">Coffe Mania</p>
+            <p class="subtitle">«Тут кава не просто напій, а стиль життя!»</p>
+        </div>
+        <a class="buy_btn" href="{% url 'menu_page' %}">Замовити</a>
+    </div>
+    <div class="main_content">
+        <div class="additionally">
+            <h2>Додатково</h2>
+            <div class="carts_additionally">
+
+                <div class="cart_additionally">
+                    <p class="img_add"><img src="{% static 'img/additionals/wifi.png' %}"></p>
+                    <p>Безкоштовний інтернет</p>
+                </div>
+                <div class="cart_additionally">
+                    <p class="img_add"><img src="{% static 'img/additionals/delivery.png' %}"></p>
+                    <p>Безкоштовна доставка по Дніпру
+                        Від 1000грн</p>
+                </div>
+                <div class="cart_additionally">
+                    <p class="img_add"><img src="{% static 'img/additionals/open_zone.png' %}"></p>
+                    <p>Відкрита зона на газоні</p>
+                </div>
+            </div>
+        </div>
+        <div class="we_offer">
+            <h2>Ми пропонуємо</h2>
+            <div class="commoditys">
+                <div class="commodity">
+                    <img src="{% static 'img/commodity_img/paperoni.png' %}">
+                    <div class="desc">
+                        <p>Папероні-байт</p>
+                        <a href="{% url 'menu_page' %}">Замовити</a>
+                    </div>
+                </div>
+                <div class="commodity comm_del">
+                    <img src="{% static 'img/commodity_img/late.png' %}">
+                    <div class="desc">
+                        <p>Лате з карамеллю і корицею</p>
+                        <a href="{% url 'menu_page' %}">Замовити</a>
+                    </div>
+                </div>
+                <div class="commodity">
+                    <img src="{% static 'img/commodity_img/tea.png' %}">
+                    <div class="desc">
+                        <p>Чай з імбиром, медом та лимоном</p>
+                        <a href="{% url 'menu_page' %}">Замовити</a>
+                    </div>
+                </div>
+                <div class="commodity comm_del">
+                    <img src="{% static 'img/commodity_img/brauni.png' %}">
+                    <div class="desc">
+                        <p>Шоколадний брауні з горіхами</p>
+                        <a href="{% url 'menu_page' %}">Замовити</a>
+                    </div>
+                </div>
+                <div class="commodity comm_del_2">
+                    <img src="{% static 'img/commodity_img/cruasan.png' %}">
+                    <div class="desc">
+                        <p>Круасан з ванільним кремом</p>
+                        <a href="{% url 'menu_page' %}">Замовити</a>
+                    </div>
+                </div>
+                <div class="commodity comm_del">
+                    <img src="{% static 'img/commodity_img/cacao.png' %}">
+                    <div class="desc">
+                        <p>Какао з маршмеллоу і вершками</p>
+                        <a href="{% url 'menu_page' %}">Замовити</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <img class="mark" src="{% static 'img/mark.png' %}">
+
+        <div class="contact_form">
+            <div class="social-media-in-form">
+                <h2>Зв'яжіться з нами</h2>
+                <h3>Будь-який ч<span>ас, будь-яки</span>м способом</h3>
+                <div class="inner-bloks">
+                    <div class="contact">
+                        <h2>Контакти</h2>
+                        <p><img src="{% static 'img/social_media/gps.png' %}">МостСіті, Дніпро, Україна</p>
+                        <p><img src="{% static 'img/social_media/green_email.png' %}">coffemania@gmail. com</p>
+                        <p><img src="{% static 'img/social_media/green_phone.png' %}">+380 38 0380 380</p>
+                    </div>
+                    <div class="social-media">
+                        <h2>Соцмережі</h2>
+                        <p><img src="{% static 'img/social_media/green_facebook.png' %}">Facebook</p>
+                        <p><img src="{% static 'img/social_media/green_twitter.png' %}">Twitter</p>
+                        <p><img src="{% static 'img/social_media/green_inst.png' %}">Instagram</p>
+                    </div>
+                </div>
+
+            </div>
+            <form method="post" class="feedback-form">
+                <h2>Надішліть</h2>
+                <h3><span>Повідом</span>лення</h3>
+                <input class="input_in_form" type="text" placeholder="Ім'я">
+                <input class="input_in_form" type="email" placeholder="Email">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Повідомлення"></textarea>
+                <button><p>Надіслати</p></button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

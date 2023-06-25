@@ -1,0 +1,33 @@
+{% extends 'auth/base_auth.html' %}
+{% load static %}
+
+
+{% block title %} Вхід {% endblock %}
+
+{% block form %}
+<div class="form_div">
+    
+    <h1 class="title-form">Вхід</h1>
+    <form class="form" method="POST">
+        {% csrf_token %}
+        <input class="redirect_url" value="{% url 'main_page' %}" hidden>
+        <div class="inputs">
+            <input type="text" class="reg_input" id="phone" name="phone" placeholder="Номер телефона" autocomplete="off"
+                required><br>
+
+            <input type="password" class="reg_input" id="password" name="password" placeholder="Пароль"
+                autocomplete="off" required><br>
+            <a href="#">Забули пароль?</a>
+        </div>
+        <p class="error"></p>
+        <button class="reg_button log" value="{% url 'login' %}">Увійти</button>
+    </form>
+    <div class="nav_btn">
+        <a class="log_btn" href=" {% url 'menu_page' %}"><img class="arrow revers"
+                src="{% static 'auth_img/arrow.png' %}" alt="">До товару</a>
+        <a class="log_btn" href=" {% url 'reg_page' %}">Реєстрація <img class="arrow"
+                src="{% static 'auth_img/arrow.png' %}" alt=""></a>
+    </div>
+</div>
+
+{% endblock %}

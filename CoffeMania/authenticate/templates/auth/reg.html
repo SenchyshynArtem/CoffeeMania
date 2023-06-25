@@ -1,0 +1,41 @@
+{% extends 'auth/base_auth.html' %}
+{% load static %}
+
+
+{% block title %} Реєстрація {% endblock %}
+
+{% block form %}
+<div class="form_div">
+
+    <h1 class="title-form">Реєстрація</h1>
+    <form class="form" method="POST">
+        {% csrf_token %}
+        <input class="redirect_url" value="{% url 'main_page' %}" hidden>
+        <div class="inputs">
+            <input type="text" class="reg_input check_lenght_input name" id="firstname" name="firstname"
+                placeholder="Прізвище" autocomplete="off" required><br>
+            <input type="text" class="reg_input check_lenght_input" id="name" name="name" placeholder="Ім'я"
+                autocomplete="off" required><br>
+
+            <input type="text" class="reg_input" id="phone" name="phone" placeholder="Номер телефона" autocomplete="off"
+                required><br>
+
+            <input type="password" class="reg_input" id="password" name="password" placeholder="Пароль"
+                autocomplete="off" required><br>
+            <input type="password" class="reg_input" id="confirm_password" name="confirm_password"
+                placeholder="Продоблюйте пароль" autocomplete="off" required>
+        </div>
+        <p class="error"></p>
+        <button class="reg_button reg" value="{% url 'register' %}">Зареєструватись</button>
+
+    </form>
+    <div class="nav_btn">
+        <a class="log_btn" href=" {% url 'menu_page' %}"><img class="arrow revers"
+                src="{% static 'auth_img/arrow.png' %}" alt="">До товару</a>
+        <a class="log_btn" href=" {% url 'login_page' %}">Вхід <img class="arrow"
+                src="{% static 'auth_img/arrow.png' %}" alt=""></a>
+    </div>
+
+</div>
+
+{% endblock %}

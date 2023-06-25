@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,400;0,700;1,300&display=swap');
+
+
+.basket_content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 3% 3%;
+}
+
+.header-basket {
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 4% 1%;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    background-color: #85DB9D;
+    z-index: 999;
+    width: 100%;
+}
+
+
+.modal-basket-cloth {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(35, 35, 35, 0.5);
+    z-index: 14;
+}
+
+.header-basket h1 {
+    color: rgb(0, 0, 0);
+    font-size: calc(24px + 10 * (100vw / 1920));
+}
+
+.close_basket {
+    font-size: 39px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+
+
+.button_block {
+    display: flex;
+    position: sticky;
+    bottom: 0;
+    background-color: #2c2c2c;
+    width: 100%;
+    height: fit-content;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3% 1%;
+}
+
+.buy-button, .buy-button_a {
+    color: black;
+    position: sticky;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1% 3%;
+    margin-top: 10px;
+    background: #85DB9D;
+    border: none;
+    border-radius: 13px;
+    font-family: 'Pacifico';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    /* identical to box height */
+    letter-spacing: 0.215em;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.buy-button:hover, .buy-button_a:hover {
+    background: #60b478;
+}
+
+.empty_inner_basket_div {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+
+.empty_inner_basket {
+    width: 25%;
+}
+
+.empty_inner_basket_div h1 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc(24px + 10 * (100vw / 1920));
+    color: #d6d6d6;
+}
+
+.empty_inner_basket_div a{
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #28b54d;
+    border-radius: 15px;
+    padding: 1%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    color: #28b54d;
+    font-size: calc(24px + 10 * (100vw / 1920));
+    transition: 0.3s;
+}
+
+.empty_inner_basket_div a:hover{
+    color: #18de4c;
+}
+
+
+
+
+
+.product_basket {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh;
+    margin-bottom: 3%;
+    background-color: #85DB9D;
+    border-radius: 20px;
+}
+
+.product_info {
+    display: flex
+}
+
+.product_info img {
+    border-radius: 100%;
+    height: 10vh;
+}
+
+
+.product-name {
+    display: flex;
+    width: fit-content;
+    font-family: 'Pacifico';
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc(20px + 6 * (100vw / 1920));
+    color: black;
+    text-decoration: none;
+    width: 100%;
+    margin-left: 5%;
+}
+
+.product-name:hover{
+    text-decoration: underline;
+}
+
+
+
+
+.settings_product{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 20%;
+    height: 100%;
+}
+
+.product-amount{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size:calc(22px + 6 * (100vw / 1920));
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 1% 3%;
+    user-select: none;
+}
+
+.change_amount {
+    cursor: pointer;
+    font-size:calc(22px + 10 * (100vw / 1920));
+}
+
+.product-price{
+    width: max-content;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size:calc(22px + 6 * (100vw / 1920));
+}
+
+.buttons_product {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.product-remove-button {
+    background: none;
+    border: none;
+    width: 5vh;
+    height: 5vh;
+    cursor: pointer;
+    
+}
+
+
+
+.product-remove-button img {
+    width: 100%;
+}
+
+
+.go_shoping{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #28b54d;
+    border-radius: 15px;
+    padding: 1% ;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    color: #28b54d;
+    font-size: calc(16px + 4 * (100vw / 1920));
+    transition: 0.3s;
+}
+
+.go_shoping:hover{
+    color: #18de4c;
+}
+
+
+.full_price_div{
+    font-weight: 700;
+    color: white;
+    font-size: calc(18px + 4 * (100vw / 1920));
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 1%;
+    
+}
+
+
+.buy-modal-window {
+    z-index: 10;
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 10px 0px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 300px;
+    background: #2C2C2C;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.close-button {
+    font-size: 40px;
+    color: #85DB9D;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-button:hover{
+    font-size: 50px;
+    transform: rotate(30deg);
+}
+
+.text-order {
+    margin: 0 auto;
+    font-family: 'Orelega One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 35px;
+    color: #85DB9D;
+}
+
+.order-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    gap: 10px;
+    width: 500px;
+    height: 203px;
+}
+
+.order-button {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    padding: 0px;
+    width: 288px;
+    height: 58px;
+    border: none;
+    background: #85DB9D;
+    border-radius: 10px;
+    font-family: 'Orelega One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.order-button:hover{
+    background: #488358;
+    color: white;
+}
+
+@media screen and (max-width: 1280px) {
+    .product-name{
+        width: 20vw;
+        font-size: calc(24px (6 + 6 * 0.7) + ((100vw - 320px) / 1920))
+    }
+    .settings_product{
+        width: 30%;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    
+    .product-name{
+        width: 35vw;
+    }
+    .header-basket h1,
+    .empty_inner_basket_div h1,
+    .empty_inner_basket_div a {
+        font-size: calc(24px (10 + 10 * 0.7) + ((100vw - 320px) / 1920))
+    }
+
+    .empty_inner_basket_div a {
+        width: 40%;
+    }
+    .go_shoping{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .empty_inner_basket_div a {
+        width: 60%;
+    }
+    .go_shoping{
+        display: none;
+    }
+
+    .product_basket{
+        height: 25vh;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-around;
+    }
+    
+    .product_info img {
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .product-name{
+        width: 100%;
+    }
+    .settings_product{
+        width: 100%;
+        align-items: center;
+        height: fit-content;
+    }
+
+    .buttons_product{
+        flex-direction: row-reverse;
+        height: fit-content;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .empty_inner_basket_div a {
+        width: 80%;
+    }
+
+    .settings_product{
+        width: 100%;
+        align-items: center;
+        height: fit-content;
+        flex-direction: column;
+    }
+
+    .buttons_product{
+        flex-direction: row;
+        height: fit-content;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .button_block{
+        flex-direction: column;
+    }
+}

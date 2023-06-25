@@ -1,0 +1,288 @@
+.header-profile {
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 4% 1%;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    background-color: #85DB9D;
+    z-index: 999;
+    width: 100%;
+}
+
+.close_profile {
+    font-size: 39px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.content_profile {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: start;
+    justify-content: start;
+}
+
+.navbar_profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30%;
+    height: 100%;
+    background: #3b3b3b;
+    padding: 2%;
+}
+
+.my_profile,
+.settings_profile,
+.log-out {
+    display: flex;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    color: #000000;
+    background: #9afbb5;
+    padding: 2%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.my_profile {
+    background: #85DB9D;
+}
+
+.my_profile:hover,
+.settings_profile:hover,
+.log-out:hover {
+    background: #85DB9D;
+}
+
+.my_profile img,
+.settings_profile img,
+.log-out img {
+    height: 5vh;
+    margin-right: 5px;
+}
+
+
+.user_pages {
+    width: 70%;
+    padding: 2%;
+    height: 100%;
+}
+
+.profile_page {
+    border-radius: 20px;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100%;
+    background: #85DB9D;
+}
+
+
+
+.username_title {
+    margin: 0;
+    font-weight: 700;
+    font-size: calc(24px + 8 * (100vw / 1920));
+}
+
+.username {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: calc(22px + 10 * (100vw / 1920));
+    margin-bottom: 1em;
+}
+
+.username input {
+    cursor: default;
+    font-weight: 400;
+    font-size: calc(20px + 4 * (100vw / 1920));
+    background: none;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 1% 0;
+}
+
+.edit_icon,
+.send_change {
+    cursor: pointer;
+    height: 1em;
+}
+
+
+
+
+.profile_setting {
+    border-radius: 20px;
+    padding: 5%;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background: #85DB9D;
+}
+
+.unreg_page {
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.unreg_img {
+    width: 25%;
+}
+
+.unreg_page h1 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc(22px + 10 * (100vw / 1920));
+    color: #d6d6d6;
+    text-align: center;
+}
+
+.button_div {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2% 0;
+    margin-top: 10px;
+    gap: 20px;
+}
+
+.auth-button {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    padding: 2% 0;
+    width: 40%;
+    border: none;
+    background: #85DB9D;
+    border-radius: 10px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.auth-button:hover {
+    background: #488358;
+    color: white;
+}
+
+
+@media screen and (max-width: 1280px) {
+    .button_div {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .button_div {
+        justify-content: center;
+        width: 90%;
+    }
+
+    .content_profile {
+        flex-direction: column-reverse;
+
+    }
+
+    .navbar_profile {
+        position: sticky;
+        bottom: 0;
+        left: 0;
+        flex-direction: row;
+        width: 100%;
+        height: 16%;
+    }
+
+    .user_pages {
+        width: 100%;
+    }
+
+    .log-out span,
+    .my_profile span {
+        display: none;
+        margin: 0;
+    }
+
+    .my_profile img,
+    .log-out img {
+        margin: 0;
+        height: 40px;
+    }
+
+    .my_profile,
+    .log-out {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 535px) {
+    .button_div {
+        justify-content: center;
+        width: fit-content;
+    }
+
+    .auth-button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .edit_icon,
+    .send_change {
+        width: 2em;
+        height: 2em
+    }
+
+    .username span {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .user_pages {
+        overflow: hidden;
+    }
+
+    .profile_page {
+        height: 50vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+}

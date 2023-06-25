@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Оформлення замовлення</title>
+  <link rel="stylesheet" href="{% static 'ordering_css/ordering.css' %}">
+  <script src="{% static 'js/jQuery.js' %}" defer></script>
+  <script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js" defer></script>
+  <script src="{% static 'ordering_js/ordering.js' %}" defer></script>
+</head>
+
+<body>
+  <div class="ordering_content">
+    <input class="redirect_url" value="{% url 'main_page' %}" hidden>
+    <form action="#" method="post" class="form">
+      <input class="url" value="{% url 'ordering' %}" hidden>
+
+      <h2>Оформлення замовлення</h2>
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="name">Ім'я:</label>
+        <input type="text" name="name" id="name" autocomplete="off" value="{{ name }}">
+        <span class="error-message"></span>
+      </div>
+      <div class="form-group">
+        <label for="surname">Прізвище:</label>
+        <input type="text" name="surname" id="surname" autocomplete="off" value="{{ surname }}">
+        <span class="error-message"></span>
+      </div>
+      <div class="form-group">
+        <label for="phone">Номер телефону:</label>
+        <input type="text" name="phone" id="phone" autocomplete="off" value="{{ user.username }}">
+        <span class="error-message"></span>
+      </div>
+      <div class="adress-group">
+        <br>
+        <div class="inputs_adress">
+          <!-- <div class="group"><label for="city">Місто</label><input type="text" name="city" id="city" autocomplete="off"></div> -->
+          <div class="group street form-group" ><label for="street">Вулиця</label><input type="text" name="street" id="street" autocomplete="off" value="{{ street }}"></div>
+          <div class="group form-group"><label for="build">Будинок</label><input type="text" name="build" id="build" autocomplete="off" value="{{ house }}"></div>
+          <div class="group_room"><label for="room">Квартира</label><input type="text" name="room" id="room" autocomplete="off" value="{{ room }}" ></div>
+        </div>
+        
+        <span class="error-message"></span>
+      </div>
+      <input type="submit" value="Замовити" class="submit-button">
+    </form>
+
+    
+  </div>
+</body>
+
+</html>

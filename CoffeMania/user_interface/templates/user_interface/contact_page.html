@@ -1,0 +1,50 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'main/contact.css' %}">
+{% endblock %}
+{% block js %}
+<script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js" defer></script>
+{% endblock %}
+{% block title %}Контакти{% endblock%}
+
+{% block content %}
+
+<div class="content">
+    <div class="contact_form">
+        <div class="social-media-in-form">
+            <h2>Зв'яжіться з нами</h2>
+            <h3>Будь-який ч<span>ас, будь-яки</span>м способом</h3>
+            <div class="inner-bloks">
+                <div class="contact">
+                    <h2>Контакти</h2>
+                    <p><img src="{% static 'img/social_media/gps.png' %}">МостСіті, Дніпро, Україна</p>
+                    <p><img src="{% static 'img/social_media/green_email.png' %}">coffemania@gmail. com</p>
+                    <p><img src="{% static 'img/social_media/green_phone.png' %}">+380 38 0380 380</p>
+                </div>
+                <div class="social-media">
+                    <h2>Соцмережі</h2>
+                    <p><img src="{% static 'img/social_media/green_facebook.png' %}">Facebook</p>
+                    <p><img src="{% static 'img/social_media/green_twitter.png' %}">Twitter</p>
+                    <p><img src="{% static 'img/social_media/green_inst.png' %}">Instagram</p>
+                </div>
+            </div>
+
+        </div>
+        <form method="post" class="feedback-form">
+            {% csrf_token %}
+            <input class="send_letter" value="{% url 'contact_page' %}" type="hidden">
+            <h2>Надішліть</h2>
+            <h3><span>Повідом</span>лення</h3>
+            <input name="name" class="input_in_form" type="text" placeholder="Ім'я">
+            <input name="phone" class="input_in_form" id="phone_letter" type="text" placeholder="Номер телефону">
+            <textarea name="message" id="" cols="30" rows="10" placeholder="Повідомлення"></textarea>
+            <button>
+                <p>Надіслати</p>
+            </button>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}
